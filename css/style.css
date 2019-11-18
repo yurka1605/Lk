@@ -107,7 +107,7 @@ main {
     height: auto;
 }
 .container {
-    max-width: 1365px;
+    /* max-width: 1365px; */
     width: 100%;
     margin: 0 auto;
 }
@@ -536,3 +536,84 @@ select#period {
     margin: 5px!important;
 }
 /* END:form */
+
+/* Tarrifs */
+.main__content_items {
+    display: flex;
+    width: 1100px;
+    padding-bottom: 155px;
+}
+.main__content_item:first-child {
+    width: 345px;
+}
+.main__content_item:last-child {
+    width: calc(100% - 345px);
+}
+.main__content_sert {
+    display: flex;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.main__content_table .table__sertificate_body {
+    width: calc(100%/3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.main__content_article,
+.main__content_table .table__sertificate_body td {
+    height: 100px;
+}
+.main__content_article:first-child,
+.main__content_table .table__sertificate_body th {
+    height: 64px;
+}
+.main__content_table .table__sertificate_body th span {
+    font-size: 22px;
+    position: relative;
+}
+.main__content_table .table__sertificate_body th span:after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 1px;
+    width: 145%;
+    background-color: #cbcbcb;
+}
+.td-grey {
+    background: #f8f8f8!important;
+}
+.main__content_table .table__sertificate_body td div {
+    color: #09699e;
+    font-size: 24px;
+}
+.main__content_table .table__sertificate_body td div p {
+    color: #303030;
+    font-size: 16px;
+}
+.main__content_table .table__sertificate_body td .search__control_btn {
+    margin-top: 5px;
+}
+.main__content_article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 13px;
+    padding-right: 10px;
+}
+.main__content_article .content__item_head {
+    color: #09699e;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+.main__content_article .content__item_text {
+    font-size: 12px;
+}
+.main__content_article:nth-child(2n + 1) {
+    background: #ffffff;
+}
+.main__content_article:first-child {
+    background: transparent;
+}
+/* END:Tarrifs */
