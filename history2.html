@@ -75,15 +75,15 @@
                             </div>
                             <div class="search__control">
                                 <label for="before">Дата до</label>
-                                <input id="before" class="search__control_date" type="text" placeholder="29.05.1999">
+                                <input id="before" required class="search__control_date" type="text" placeholder="29.05.1999">
                             </div>
                             <div class="search__control">
                                 <label for="fil">Филиал</label>
-                                <input id="fil" class="search__control_fil" type="text" placeholder="000072, г. Санкт-Петербург">
+                                <input id="fil" required class="search__control_fil" type="text" placeholder="000072, г. Санкт-Петербург">
                             </div>
                             <div class="search__control">
                                 <label for="fio">ФИО</label>
-                                <input id="fio" class="search__control_fio" type="text" placeholder="Иванов Иван Иванович">
+                                <input id="fio" required class="search__control_fio" type="text" placeholder="Иванов Иван Иванович">
                             </div>
                         </div>
                         <div class="search__row">
@@ -97,7 +97,7 @@
                             </div>
                             <div class="search__control">
                                 <label for="sertnum">Номер сертификата</label>
-                                <input id="sertnum" class="search__control_sertnum" type="text" placeholder="3241654351435">
+                                <input id="sertnum" required class="search__control_sertnum" type="text" placeholder="3241654351435">
                             </div>
                             <div class="search__control">
                                 <label for="status">Статус</label>
@@ -271,5 +271,13 @@
             </div>
         </section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script>
+        $(function(){
+            $("#from").mask("99.99.9999");
+            $("#before").mask("99.99.9999");
+        });
+    </script>
 </body>
 </html>

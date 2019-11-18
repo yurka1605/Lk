@@ -79,11 +79,11 @@
                         </div>
                         <div class="search__row">
                             <label for="f">Фамилия:</label>
-                            <input id="f" type="text" placeholder="Иванов">
+                            <input id="f" required type="text" placeholder="Иванов">
                         </div>
                         <div class="search__row">
                             <label for="i">Имя:</label>
-                            <input id="i" type="text" placeholder="Иван">
+                            <input id="i" required type="text" placeholder="Иван">
                         </div>
                         <div class="search__row">
                             <label for="o">Отчество:</label>
@@ -91,22 +91,22 @@
                         </div>
                         <div class="search__row">
                             <label for="birthday">Дата рождения:</label>
-                            <input id="birthday" placeholder="29.05.1999">
+                            <input id="birthday" required placeholder="29.05.1999">
                         </div>
                         <div class="search__row">
                             <label for="email">E-mail:</label>
-                            <input id="email" type="email" placeholder="ivanov14@googlemail.com">
+                            <input id="email" required type="email" placeholder="ivanov14@googlemail.com">
                         </div>
                         <div class="search__row search__row_phone">
                             <label for="phone">Телефон:</label>
-                            <input id="phone" type="phone" placeholder="+7 (495) 125 89 36">
+                            <input id="phone" required type="phone" placeholder="+7 (495) 125 89 36">
                         </div>
                         <div class="search__row search__row_label">
                             <div class="search__checkbox">
-                                <input checked="checked" id="check" required type="checkbox">
+                                <input checked="checked" required id="check" required type="checkbox">
                             </div>
                             <label class="search__label_money">
-                                Деньги в размере <input type="text" placeholder="12 000"> руб. внесены в кассу
+                                Деньги в размере <input required type="text" placeholder="12 000"> руб. внесены в кассу
                             </label>
                         </div>
                         <div class="search__row search__row_btn">
@@ -117,5 +117,13 @@
             </div>
         </section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script>
+        $(function(){
+            $("#phone").mask("+7 (999) 999-9999");
+            $("#birthday").mask("99.99.9999");
+        });
+    </script>
 </body>
 </html>

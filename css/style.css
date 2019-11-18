@@ -480,7 +480,7 @@ select#period {
 }
 .main__content_sertificate .search__row input#birthday {
     min-width: 191px;
-    margin-right: 146px;
+    margin-right: 145px;
     background: url(../img/histroy1/calendar.png);
     background-position-x: 95%;
     background-position-y: center;
