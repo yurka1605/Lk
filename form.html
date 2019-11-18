@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sign in</title>
+</head>
+<body>
+    <main>
+        <header class="header">
+            <div class="container header__container">
+                <div class="header__wrap">
+                    <div class="header__menu">
+                        <img src="img/histroy1/list.png" alt="Меню">
+                    </div>
+                    <div class="header__items">
+                        <div class="header__search">
+                            <input type="text" placeholder="Начните набирать текст...">
+                            <img src="img/histroy1/loop.png" alt="Поиск">
+                        </div>
+                        <div class="header__logo">
+                            <a href="/"><img src="img/signin/logo.png" alt="logo"></a>
+                        </div>
+                        <div class="header__user">
+                            <div class="header__user_notification">
+                                <div class="user__notification_info">45</div>
+                                <a href="#"><img class="user__notification_sign" src="img/histroy1/notification.png" alt="Оповещения"></a>
+                            </div>
+                            <div class="header__user_info">
+                                <div class="header__user_name">
+                                    <a href="#">Светлакова Марина</a>
+                                </div>
+                                <div class="header__user_place">
+                                    <a href="#">000072, г. Санкт-Петербург</a>
+                                </div>
+                            </div>
+                            <div class="header__user_avatar">
+                                <a href="#"><img src="img/histroy1/user.png" alt="Аватар"></a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+            </div>
+        </header>
+        <section class="main">
+            <div class="container main__container">
+                <aside class="main__aside">
+                    <div class="main__aside_item">
+                        <img src="img/histroy1/main.png" alt="Главная">
+                        <div class="aside__item_text">Главная</div>
+                    </div>
+                    <div class="main__aside_item">
+                        <img src="img/histroy1/order.png" alt="Заказ">
+                        <div class="aside__item_text">Заказ</div>
+                    </div>
+                    <div class="main__aside_item active">
+                        <img src="img/histroy1/counterclockwise.png" alt="История">
+                        <div class="aside__item_text">История</div>
+                    </div>
+                    <div class="main__aside_item">
+                        <img src="img/histroy1/bar-chart.png" alt="Статистика">
+                        <div class="aside__item_text">Статистика</div>
+                    </div>
+                </aside>
+                <section class="main__content">
+                    <h1 class="main__content_header">Заявка на сертификат</h1>
+                    <form action="#" class="main__content_sertificate">
+                        <div class="search__row">
+                            <label for="from">Тариф:</label>
+                            <select name="Стандарт" id="type">
+                                <option value="Стандарт">Стандарт</option>
+                                <option value="Премиум">Премиум</option>
+                                <option value="Бизнес">Бизнес</option>
+                                <option value="Эконом">Эконом</option>
+                            </select>
+                        </div>
+                        <div class="search__row">
+                            <label for="f">Фамилия:</label>
+                            <input id="f" type="text" placeholder="Иванов">
+                        </div>
+                        <div class="search__row">
+                            <label for="i">Имя:</label>
+                            <input id="i" type="text" placeholder="Иван">
+                        </div>
+                        <div class="search__row">
+                            <label for="o">Отчество:</label>
+                            <input id="o" type="text" placeholder="Иванович">
+                        </div>
+                        <div class="search__row">
+                            <label for="birthday">Дата рождения:</label>
+                            <input id="birthday" placeholder="29.05.1999">
+                        </div>
+                        <div class="search__row">
+                            <label for="email">E-mail:</label>
+                            <input id="email" type="email" placeholder="ivanov14@googlemail.com">
+                        </div>
+                        <div class="search__row search__row_phone">
+                            <label for="phone">Телефон:</label>
+                            <input id="phone" type="phone" placeholder="+7 (495) 125 89 36">
+                        </div>
+                        <div class="search__row search__row_label">
+                            <div class="search__checkbox">
+                                <input checked="checked" id="check" required type="checkbox">
+                            </div>
+                            <label class="search__label_money">
+                                Деньги в размере <input type="text" placeholder="12 000"> руб. внесены в кассу
+                            </label>
+                        </div>
+                        <div class="search__row search__row_btn">
+                            <button type="submit" class="search__control_btn">Отправить заявку</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
