@@ -102,6 +102,8 @@ a {
 .signin__loser {
     color: #09699e;
     font-size: 16px;
+    cursor: pointer;
+    transition: all .5s linear;
 }
 /* sign-in:END */
 
@@ -109,6 +111,7 @@ main {
     width: 100%;
     background: #f8f8f8;
     height: auto;
+    min-height: 100vh;
 }
 .container {
     /* max-width: 1365px; */
@@ -135,6 +138,9 @@ header {
     justify-content: center;
     width: 92px;
 }
+.header__menu img {
+    cursor: pointer;
+}
 .header__items {
     width: calc(100% - 92px);
     display: flex;
@@ -148,12 +154,22 @@ header {
     display: flex;
     align-items: center;
 }
-.header__search img {
-    margin-left: -33px;
+.header__search svg:hover path {
+    fill: #09699e;
+}
+.header__search svg path {
+    fill: #939393;
+    transition: fill .2s linear;
+}
+.header__search svg {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    margin-left: -50px;
     cursor: pointer;
 }
 .header__search input {
-    padding: 15px 40px 15px 15px;
+    padding: 15px 50px 15px 15px;
     text-align: left;
 }
 .header__user_notification {
@@ -194,23 +210,31 @@ header {
 
 .main {
     height: auto;
+    min-height: calc(100vh - 100px);
 }
 
 .main__container {
     display: flex;
     height: auto; 
+    min-height: inherit;
 }
 .main__aside {
+    margin-left: -100px;
     height: inherit;
     padding: 15px 0;
     width: 92px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
+    transition: all .3s linear;
+}
+.main__aside.active {
+    margin-left: 0;
 }
 .main__aside_item {
     cursor: pointer;
     padding: 15px 0;
     border-left: 6px solid transparent;
+    transition: all .4s linear;
 }
 .main__aside_item img {
     display: block;
@@ -224,6 +248,7 @@ header {
 .main__aside_item.active {
     border-color: #09699e;
 }
+.main__aside_item:hover > .aside__item_text,
 .main__aside_item.active > .aside__item_text {
     color: #09699e;
 }
@@ -437,11 +462,15 @@ select#period {
 .search__control_sertnum {
     width: 185px;
 }
+.signin__loser:hover {
+    color: #043b58;
+}
 .search__control_btn:hover{
     background-color: #043b58;
 }
+
 .search__control_btn {
-    transition: all 1s linear;
+    transition: all .3s linear;
     color: #ffffff;
     font-size: 16px;
     padding: 15px 28px;
@@ -450,6 +479,10 @@ select#period {
     border: 0;
     cursor: pointer;
     margin-top: 10px;
+    cursor: pointer;
+}
+.search__reset:hover {
+    color: #043b58;
 }
 .search__reset {
     cursor: pointer;
@@ -458,6 +491,7 @@ select#period {
     margin-top: 20px;
     background: none;
     border: 0;
+    transition: all 0.3s;
 }
 /* history2:END */
 
@@ -488,8 +522,8 @@ select#period {
     min-width: 286px;
 }
 .main__content_sertificate .search__row input#birthday {
-    min-width: 191px;
-    margin-right: 145px;
+    /* min-width: 191px;
+    margin-right: 145px; */
     background: url(../img/histroy1/calendar.png);
     background-position-x: 95%;
     background-position-y: center;
@@ -542,14 +576,14 @@ select#period {
     min-width: 65px!important;
     width: 70px;
     padding: 11px;
-    margin: 5px!important;
+    margin: 0px!important;
 }
 /* END:form */
 
 /* Tarrifs */
 .main__content_items {
     display: flex;
-    width: 1100px;
+    width: 1145px;
     padding-bottom: 155px;
 }
 .main__content_item:first-child {
@@ -626,3 +660,26 @@ select#period {
     background: transparent;
 }
 /* END:Tarrifs */
+
+@media (min-width: 1500px) {
+    .main__content_search .search__row:nth-child(2),
+    .main__content_search .search__row:first-child {
+        width: 50%;
+        display: inline-flex;
+    }
+    .main__content_search .search__row:nth-child(2) {
+        width: calc(50% - 25px);
+        margin-left: 20px;
+    }
+    .main__content_search .search__row:nth-child(2) .search__control,
+    .main__content_search .search__row:first-child .search__control {
+        min-width: calc(100%/4 - 20px);
+        width: calc(100%/4 - 20px);
+    }
+    .main__content_search .search__row:nth-child(2) .search__control select,
+    .main__content_search .search__row:nth-child(2) .search__control input,
+    .main__content_search .search__row:first-child .search__control input {
+        min-width: 100%;
+        width: 100%!important;
+    }
+}

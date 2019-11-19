@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.min.css">
     <title>Sign in</title>
 </head>
 <body>
@@ -18,7 +19,9 @@
                     <div class="header__items">
                         <div class="header__search">
                             <input type="text" placeholder="Начните набирать текст...">
-                            <img src="img/histroy1/loop.png" alt="Поиск">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path>
+                            </svg>
                         </div>
                         <div class="header__logo">
                             <a href="/"><img src="img/signin/logo.png" alt="logo"></a>
@@ -47,7 +50,7 @@
         </header>
         <section class="main">
             <div class="container main__container">
-                <aside class="main__aside">
+                <aside class="main__aside active">
                     <div class="main__aside_item">
                         <img src="img/histroy1/main.png" alt="Главная">
                         <div class="aside__item_text">Главная</div>
@@ -119,10 +122,17 @@
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js//jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script>
         $(function(){
             $("#phone").mask("+7 (999) 999-9999");
-            $("#birthday").mask("99.99.9999");
+            $.datepicker.setDefaults(
+                $.extend( $.datepicker.regional[ '' ] )
+            );
+            $('#birthday').datepicker({dateFormat: "dd.mm.yy"});
+            $('.header__menu img').on('click', function() {
+                $('.main__aside').toggleClass('active');
+            });
         });
     </script>
 </body>
