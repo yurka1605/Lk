@@ -437,6 +437,9 @@ select#period {
 .search__control_sertnum {
     width: 185px;
 }
+.search__control_btn:hover{
+    background-color: #043b58;
+}
 .search__control_btn {
     color: #ffffff;
     font-size: 16px;
