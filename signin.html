@@ -17,14 +17,16 @@
                 <form action="#" class="sign-in__item">
                     <img class="signin__logo" src="img/signin/logo.png" alt="logo">
                     <label for="login" class="signin__label">Логин:</label>
-                    <input class="signin__input" type="text" placeholder="Индекс почтового отделения" id="login">
+                    <input class="signin__input" required type="text" placeholder="Индекс почтового отделения" id="login">
                     <label for="password" class="signin__label">Пароль:</label>
-                    <input class="signin__input" type="password" placeholder="***********" id="password">
-                    <button class="signin__button">Войти в систему</button>
+                    <input class="signin__input" required type="password" placeholder="***********" id="password">
+                    <button type="submit" class="signin__button">Войти в систему</button>
                     <span class="signin__loser">Забыли пароль?</span>
                 </form>
             </div>
         </section>
     </main>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
 </body>
 </html>
