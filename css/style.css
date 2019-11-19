@@ -12,6 +12,10 @@ input, button {
     appearance: none;
     outline: none;
 }
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 html, body {
     height: auto;
 }
@@ -216,6 +220,7 @@ header {
     padding-top: 10px;
     text-align: center;
 }
+.main__aside_item:hover,
 .main__aside_item.active {
     border-color: #09699e;
 }
