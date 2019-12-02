@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <title>History</title>
+    <title>Partners</title>
 </head>
 <body>
     <main>
@@ -57,7 +57,7 @@
                         <img src="img/order.png" alt="Заказ">
                         <div class="aside__item_text">Заказ</div>
                     </a>
-                    <a href="./history2.html" class="main__aside_item active">
+                    <a href="./history2.html" class="main__aside_item">
                         <img src="img/counterclockwise.png" alt="История">
                         <div class="aside__item_text">История</div>
                     </a>
@@ -65,41 +65,39 @@
                         <img src="img/bar-chart.png" alt="Статистика">
                         <div class="aside__item_text">Статистика</div>
                     </a>
-                    <a href="./partners.html" class="main__aside_item">
+                    <a href="./partners.html" class="main__aside_item active">
                         <img src="img/settings.png" alt="Админка">
                         <div class="aside__item_text">Админка</div>
                     </a>
                 </aside>
                 <section class="main__content">
-                    <h1 class="main__content_header">История заказов</h1>
+                    <h1 class="main__content_header">
+                        <span>Партнеры</span>
+                        <button class="search__control_btn plus-partner"><span>+</span> Добавить партнера</button>
+                    </h1>
                     <form action="#" class="main__content_search">
                         <div class="search__row">
                             <div class="search__control">
-                                <label for="from">Срок действия заказа</label>
+                                <label for="from">Дата заключения договора</label>
                                 <input id="from" class="search__control_date" type="text" valau="" placeholder="">
                             </div>
                             <div class="search__control">
-                                <label for="fil">Адрес филиала</label>
-                                <input id="fil" required class="search__control_fil" type="text" placeholder="">
+                                <label for="name">Наименование</label>
+                                <input id="name" required class="search__control_fil" type="text" placeholder="">
                             </div>
                             <div class="search__control">
-                                <label for="fio">Фамилия Имя Отчество</label>
-                                <input id="fio" required class="search__control_fio" type="text" placeholder="">
+                                <label for="your">Юридическое лицо</label>
+                                <input id="your" required class="search__control_fio" type="text" placeholder="">
                             </div>
-                             <div class="search__control">
-                                <label for="type">Тип сертификата</label>
-                                <select name="премиум" id="type">
-                                    <option value=""></option>
-                                    <option value="Премиум">Премиум</option>
-                                    <option value="Премиум">Бизнес</option>
-                                    <option value="Премиум">Эконом</option>
-                                </select>
+                            <div class="search__control">
+                                <label for="partner">Представитель партнера</label>
+                                <input id="partner" required class="search__control_partner" type="text" placeholder="">
                             </div>
                         </div>
                         <div class="search__row">
                             <div class="search__control">
-                                <label for="sertnum">Номер сертификата</label>
-                                <input id="sertnum" required class="search__control_sertnum" type="text" placeholder="">
+                                <label for="contact">Контакт представителя</label>
+                                <input id="contact" required class="search__control_sertnum" type="text" placeholder="">
                             </div>
                             <div class="search__control">
                                 <label for="status">Статус</label>
@@ -111,8 +109,8 @@
                                 </select>
                             </div>
                             <div class="search__control">
-                                <label for="period">Отобразить</label>
-                                <select id="period">
+                                <label for="periods">Период отображения</label>
+                                <select id="periods">
                                     <option value=""></option>
                                     <option value="Прошлый месяц">Прошлый месяц</option>
                                     <option value="Текущий месяц">Текущий месяц</option>
@@ -130,44 +128,38 @@
                             </div>
                         </div>
                     </form>
-                    <div class="main__content_table history2">
+                    <div class="main__content_table partners">
                         <table class="table__head">
                             <thead>
                                 <tr>
-                                    <th>№</th>
+                                    <th>Идентификатор</th>
+                                    <th class="table__name">
+                                        <div class="table__text">
+                                            <span>Наименование</span>
+                                            <img src="img/histroy1/up-and-down-interface-arrows_копия_3.png" alt="arrows">
+                                        </div>
+                                    </th>
                                     <th class="table__date">
                                         <div class="table__text">
-                                            <span>Дата</span>
+                                            <span>Дата заключения договора</span>
                                             <img src="img/histroy1/up-and-down-interface-arrows_копия_3.png" alt="arrows">
                                         </div>
                                     </th>
-                                    <th class="table__fil">
+                                    <th class="table__your">
                                         <div class="table__text">
-                                            <span>Филиал</span>
+                                            <span>Юридическое лицо</span>
                                             <img src="img/histroy1/up-and-down-interface-arrows_копия_3.png" alt="arrows">
                                         </div>
                                     </th>
-                                    <th class="table__fullname">
+                                    <th class="table__partner">
                                         <div class="table__text">
-                                            <span>ФИО</span>
+                                            <span>Представитель партнера</span>
                                             <img src="img/histroy1/up-and-down-interface-arrows_копия_3.png" alt="arrows">
                                         </div>
                                     </th>
-                                    <th class="table__sert">
+                                    <th class="table__predst">
                                         <div class="table__text">
-                                            <span>Сертификат</span>
-                                            <img src="img/histroy1/up-and-down-interface-arrows_копия_3.png" alt="arrows">
-                                        </div>
-                                    </th>
-                                    <th class="table__srok">
-                                        <div class="table__text">
-                                            <span>Срок действия</span>
-                                            <img src="img/histroy1/up-and-down-interface-arrows_копия_3.png" alt="arrows">
-                                        </div>
-                                    </th>
-                                    <th class="table__number">
-                                        <div class="table__text">
-                                            <span>Номер сертификата</span>
+                                            <span>Контакт представителя</span>
                                             <img src="img/histroy1/up-and-down-interface-arrows_копия_3.png" alt="arrows">
                                         </div>
                                     </th>
@@ -177,73 +169,107 @@
                                             <img src="img/histroy1/up-and-down-interface-arrows_копия_3.png" alt="arrows">
                                         </div>
                                     </th>
+                                    <th class="table__null"></th>
                                 </tr> 
                             </thead>
                         </table>
                         <table class="table__body">
                             <tbody>
                                 <tr>
-                                    <td>1</td>
+                                    <td>
+                                        <div class="checkbox"></div>
+                                        <div class="checkbox-label">1</div>
+                                    </td>
+                                    <td class="table__name">0000489</td>
                                     <td class="table__date">24.09.2017</td>
-                                    <td class="table__fil">0000489</td>
-                                    <td class="table__fullname">Прохоров Петр Константинович</td>
-                                    <td class="table__sert">Премиум</td>
-                                    <td class="table__srok">до 02.01.2020</td>
-                                    <td class="table__number">4980576С3222АВ</td>
+                                    <td class="table__your">ООО «Газпром»</td>
+                                    <td class="table__partner">Прохоров Петр Константинович</td>
+                                    <td class="table__predst">4980576С3497АВ</td>
                                     <td class="table__status">
                                         <span class="table__status_green">Оплачен</span>
                                     </td>
+                                    <td class="table__null"><img src="img/partner/pen.png" alt="pen"></td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
-                                    <td class="table__date">24.05.2019</td>
-                                    <td class="table__fil">0011489</td>
-                                    <td class="table__fullname">Прохоров Федор Константинович</td>
-                                    <td class="table__sert">Эконом</td>
-                                    <td class="table__srok">до 22.06.2020</td>
-                                    <td class="table__number">4980576С3333АВ</td>
-                                    <td class="table__status">
-                                        <span class="table__status_red">Завершен</span>
+                                    <td>
+                                        <div class="checkbox"></div>
+                                        <div class="checkbox-label">2</div>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td class="table__date">17.05.2019</td>
-                                    <td class="table__fil">0245489</td>
-                                    <td class="table__fullname">Пименов Иван Иванович</td>
-                                    <td class="table__sert">Премиум</td>
-                                    <td class="table__srok">до 28.09.2021</td>
-                                    <td class="table__number">4980576С3290АВ</td>
+                                    <td class="table__name">0000489</td>
+                                    <td class="table__date">24.09.201</td>
+                                    <td class="table__your">ООО «Газпром»</td>
+                                    <td class="table__partner">Прохоров Петр Константинович</td>
+                                    <td class="table__predst">4980576С3497АВ</td>
                                     <td class="table__status">
                                         <span class="table__status_green">Оплачен</span>
                                     </td>
+                                    <td class="table__null"><img src="img/partner/pen.png" alt="pen"></td>
                                 </tr>
                                 <tr>
-                                    <td>4</td>
-                                    <td class="table__date">04.08.2019</td>
-                                    <td class="table__fil">0000112</td>
-                                    <td class="table__fullname">Петров Константин Константинович</td>
-                                    <td class="table__sert">Эконом</td>
-                                    <td class="table__srok">до 20.01.2022</td>
-                                    <td class="table__number">4980576С3209АВ</td>
-                                    <td class="table__status">
-                                        <span class="table__status_green">Не оплачен</span>
+                                    <td>
+                                        <div class="checkbox"></div>
+                                        <div class="checkbox-label">3</div>
                                     </td>
+                                    <td class="table__name">0000489</td>
+                                    <td class="table__date">24.09.2017</td>
+                                    <td class="table__your">ООО «Газпром»</td>
+                                    <td class="table__partner">Прохоров Петр Константинович</td>
+                                    <td class="table__predst">4980576С3497АВ</td>
+                                    <td class="table__status">
+                                        <span class="table__status_green">Оплачен</span>
+                                    </td>
+                                    <td class="table__null"><img src="img/partner/pen.png" alt="pen"></td>
                                 </tr>
                                 <tr>
-                                    <td>5</td>
-                                    <td class="table__date">14.07.2016</td>
-                                    <td class="table__fil">0000432</td>
-                                    <td class="table__fullname">Иванов Федор Александрович</td>
-                                    <td class="table__sert">Эконом</td>
-                                    <td class="table__srok">до 01.01.2021</td>
-                                    <td class="table__number">4980576С3106АВ</td>
-                                    <td class="table__status">
-                                        <span class="table__status_green">Завершен</span>
+                                    <td>
+                                        <div class="checkbox"></div>
+                                        <div class="checkbox-label">4</div>
                                     </td>
+                                    <td class="table__name">0000489</td>
+                                    <td class="table__date">24.09.2017</td>
+                                    <td class="table__your">ООО «Рос Нефть»</td>
+                                    <td class="table__partner">Прохоров Петр Константинович</td>
+                                    <td class="table__predst">4980576С3497АВ</td>
+                                    <td class="table__status">
+                                        <span class="table__status_green">Оплачен</span>
+                                    </td>
+                                    <td class="table__null"><img src="img/partner/pen.png" alt="pen"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="checkbox"></div>
+                                        <div class="checkbox-label">5</div>
+                                    </td>
+                                    <td class="table__name">0000489</td>
+                                    <td class="table__date">24.09.2017</td>
+                                    <td class="table__your">ООО «Почта России»</td>
+                                    <td class="table__partner">Прохоров Петр Константинович</td>
+                                    <td class="table__predst">4980576С3497АВ</td>
+                                    <td class="table__status">
+                                        <span class="table__status_green">Оплачен</span>
+                                    </td>
+                                    <td class="table__null"><img src="img/partner/pen.png" alt="pen"></td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <div class="main__content_actions">
+                        <div class="main__content_action">
+                            <img src="img/partner/zamok.png" alt="zamok">
+                            Заблокировать
+                        </div> 
+                        <div class="main__content_action">
+                            <img src="img/partner/roket.png" alt="roket">
+                            Активировать
+                        </div> 
+                        <div class="main__content_action">
+                            <img src="img/partner/books.png" alt="books">
+                            Архивировать
+                        </div> 
+                        <div class="main__content_action">
+                            <img src="img/partner/pensil.png" alt="pensil">
+                            Редактировать
+                        </div>
                     </div>
                     <div class="main__content_controls">
                         <div class="main__content_control-all prev">
@@ -262,6 +288,53 @@
             </div>
         </section>
     </main>
+    <div class="popup-partner">
+        <div class="popup-partner__header">
+            <span>Новый партнер</span>
+            <img src="img/partner/close.png" alt="close">
+        </div>
+        <div class="popup-partner__body">
+            <div class="search__row">
+                <div class="search__control">
+                    <label for="name">Название</label>
+                    <input id="name" required class="search__control_fil" type="text" placeholder="">
+                </div>
+                <div class="search__control">
+                    <label for="predst">Представитель партнера</label>
+                    <input id="predst" required class="search__control_fio" type="text" placeholder="">
+                </div>
+            </div>
+            <div class="search__row">
+                <div class="search__control">
+                    <label for="from">Дата заключения договора</label>
+                    <input id="from" required class="search__control_fil" type="text" placeholder="">
+                </div>
+                <div class="search__control">
+                    <label for="phone">Контакт производтителя</label>
+                    <input id="phone" required class="search__control_fio" type="text" placeholder="">
+                </div>
+            </div>
+            <div class="search__row">
+                <div class="search__control">
+                    <label for="yur">Юридическое лицо</label>
+                    <input id="yur" required type="text" placeholder="">
+                </div>
+                <div class="search__control">
+                    <label for="status">Статус</label>
+                    <select id="status">
+                        <option value=""></option>
+                        <option value="Оплачен">Оплачен</option>
+                        <option value="Ожидается">Ожидается</option>
+                        <option value="Премиум">Завершен</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="popup-partner__controls">
+            <button class="search__control_btn plus-popup-partner">Добавить партнера</button>
+            <span>Отменить создание</span>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js//jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>

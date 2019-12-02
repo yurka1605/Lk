@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-    <title>Sign in</title>
+    <title>form</title>
 </head>
 <body>
     <main>
@@ -14,7 +14,7 @@
             <div class="container header__container">
                 <div class="header__wrap">
                     <div class="header__menu">
-                        <img src="img/histroy1/list.png" alt="Меню">
+                        <img src="img/list.svg" alt="Меню">
                     </div>
                     <div class="header__items">
                         <div class="header__search">
@@ -24,12 +24,12 @@
                             </svg>
                         </div>
                         <div class="header__logo">
-                            <a href="/"><img src="img/signin/logo.png" alt="logo"></a>
+                            <a href="/"><img src="img/logo.png" alt="logo"></a>
                         </div>
                         <div class="header__user">
                             <div class="header__user_notification">
                                 <div class="user__notification_info">45</div>
-                                <a href="#"><img class="user__notification_sign" src="img/histroy1/notification.png" alt="Оповещения"></a>
+                                <a href="#"><img class="user__notification_sign" src="img/photo.png" alt="photo"></a>
                             </div>
                             <div class="header__user_info">
                                 <div class="header__user_name">
@@ -38,9 +38,6 @@
                                 <div class="header__user_place">
                                     <a href="#">000072, г. Санкт-Петербург</a>
                                 </div>
-                            </div>
-                            <div class="header__user_avatar">
-                                <a href="#"><img src="img/histroy1/user.png" alt="Аватар"></a>
                             </div>
                         </div>
                     </div> 
@@ -52,20 +49,24 @@
             <div class="container main__container">
                 <aside class="main__aside active">
                     <div class="main__aside_item">
-                        <img src="img/histroy1/main.png" alt="Главная">
+                        <img src="img/main.png" alt="Главная">
                         <div class="aside__item_text">Главная</div>
                     </div>
                     <div class="main__aside_item">
-                        <img src="img/histroy1/order.png" alt="Заказ">
+                        <img src="img/order.png" alt="Заказ">
                         <div class="aside__item_text">Заказ</div>
                     </div>
-                    <div class="main__aside_item active">
-                        <img src="img/histroy1/counterclockwise.png" alt="История">
+                    <div class="main__aside_item">
+                        <img src="img/counterclockwise.png" alt="История">
                         <div class="aside__item_text">История</div>
                     </div>
                     <div class="main__aside_item">
-                        <img src="img/histroy1/bar-chart.png" alt="Статистика">
+                        <img src="img/bar-chart.png" alt="Статистика">
                         <div class="aside__item_text">Статистика</div>
+                    </div>
+                    <div class="main__aside_item active">
+                        <img src="img/settings.png" alt="Админка">
+                        <div class="aside__item_text">Админка</div>
                     </div>
                 </aside>
                 <section class="main__content">
@@ -123,17 +124,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js//jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-    <script>
-        $(function(){
-            $("#phone").mask("+7 (999) 999-9999");
-            $.datepicker.setDefaults(
-                $.extend( $.datepicker.regional[ '' ] )
-            );
-            $('#birthday').datepicker({dateFormat: "dd.mm.yy"});
-            $('.header__menu img').on('click', function() {
-                $('.main__aside').toggleClass('active');
-            });
-        });
-    </script>
+    <script src="js/custom.js"></script>
 </body>
 </html>
