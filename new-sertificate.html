@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-    <title>Заявка на сертификат</title>
+    <title>Новый сертификат</title>
 </head>
 <body>
     <main>
@@ -70,35 +70,18 @@
                     </a>
                 </aside>
                 <section class="main__content">
-                    <h1 class="main__content_header">Заявка на сертификат</h1>
-                    <form action="#" class="main__content_sertificate">
+                    <h1 class="main__content_header">Новый сертификат</h1>
+                    <form action="#" class="main__content_sertificate new-sertificate">
                         <div class="search__row">
                             <div class="search__control">
-                                <label for="f">Фамилия:</label>
-                                <input id="f" required type="text" placeholder="">
+                                <label for="sert-name">Название</label>
+                                <input id="sert-name" required type="text" placeholder="">
                             </div>
                             <div class="search__control">
-                                <label for="i">Имя:</label>
-                                <input id="i" required type="text" placeholder="">
+                                <label for="price">Стоимость</label>
+                                <input id="price" required type="text" placeholder="">
                             </div>
-                            <div class="search__control">
-                                <label for="o">Отчество:</label>
-                                <input id="o" type="text" placeholder="">
-                            </div>
-                        </div>
-                        <div class="search__row">
-                            <div class="search__control">
-                                <label for="birthday">Дата рождения:</label>
-                                <input id="birthday" required placeholder="">
-                            </div>
-                            <div class="search__control">
-                                <label for="email">E-mail:</label>
-                                <input id="email" required type="email" placeholder="">
-                            </div>
-                            <div class="search__control search__row_phone">
-                                <label for="phone">Телефон:</label>
-                                <input id="phone" required type="phone" placeholder="">
-                            </div>
+                            <div class="search__control"></div>
                         </div>
                         <div class="search__row">
                             <div class="search__control">
@@ -111,18 +94,64 @@
                                     <option value="Эконом">Эконом</option>
                                 </select>
                             </div>
-                            <div class="search__control search__row_label">
-                                <div class="search__checkbox">
-                                    <div class="checkbox"></div>
+                            <div class="search__control">
+                                <label for="view">Видимость для партнеров</label>
+                                <select id="view">
+                                    <option value=""></option>
+                                    <option value="Все">Все</option>
+                                    <option value="Сбербанк">Сбербанк</option>
+                                    <option value="Теле 2">Теле 2</option>
+                                    <option value="Почта банк">Почта банк</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="new-sertificate__rows">
+                            <h1 class="main__content_head">Сертификат включает</h1>
+                            <div class="new-sertificate__row">
+                                <div class="checkbox"></div>
+                                <div class="main__content_article">
+                                    <div class="content__item_head">Устная правовая консультация</div>
+                                    <div class="content__item_text">
+                                        (24/7) – устная консультация по всем юридическим вопросам в рамках законодательства РФ, кроме вопросов по предпринимательской деятельности.
+                                    </div>
                                 </div>
-                                <label class="search__label_money">
-                                    Деньги в размере <input required type="text" placeholder="12 000"> руб. внесены в кассу
-                                </label>
+                                <input type="text">
+                            </div>
+                            <div class="new-sertificate__row">
+                                <div class="checkbox"></div>
+                                <div class="main__content_article">
+                                    <div class="content__item_head">Доверь переговоры юристу</div>
+                                    <div class="content__item_text">
+                                        (24/7) – устная консультация по всем юридическим вопросам в рамках законодательства РФ, кроме вопросов по предпринимательской деятельности.
+                                    </div>
+                                </div>
+                                <input type="text">
+                            </div>
+                            <div class="new-sertificate__row">
+                                <div class="checkbox"></div>
+                                <div class="main__content_article">
+                                    <div class="content__item_head">Скидки на услуги, не входящие в тарифный план</div>
+                                    <div class="content__item_text">
+                                        (24/7) – устная консультация по всем юридическим вопросам в рамках законодательства РФ, 
+                                        кроме вопросов по предпринимательской деятельности.
+                                    </div>
+                                </div>
+                                <input type="text">
+                            </div>
+                            <div class="new-sertificate__row">
+                                <div class="checkbox"></div>
+                                <div class="main__content_article">
+                                    <div class="content__item_head">Skype-сервис, доступ к личному кабинету</div>
+                                    <div class="content__item_text">
+                                        (24/7) – устная консультация по всем юридическим вопросам в рамках законодательства РФ, кроме вопросов по предпринимательской деятельности.
+                                    </div>
+                                </div>
+                                <input type="text">
                             </div>
                         </div>
                         <div class="search__row search__row_btn">
                             <button type="submit" class="search__control_btn">Отправить заявку</button>
-                            <span>Нажимая кнопку «Отправить заявку» вы даете согласие на обработку персональных данных.</span>
+                            <button type="reset" class="search__reset cancel">Отменить создание</button>
                         </div>
                     </form>
                 </section>
