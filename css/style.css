@@ -857,9 +857,11 @@ label.search__label_money {
     color: #fff;
 }
 .main__content_table .table__sertificate_body {
+    border: 1px solid transparent;
     border-right: 1px solid #dddfe0;
     position: relative;
     z-index: 1;
+    width: calc(100%/3);
 }
 .main__content_article,
 .main__content_table .table__sertificate_body td {
